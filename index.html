@@ -1,1 +1,26 @@
-<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>A-P-P-L-E Bundle｜腦中風血壓管理電子書</title><style>*{box-sizing:border-box}body{margin:0;background:#eef3f7;color:#203449;font-family:system-ui,"Microsoft JhengHei",sans-serif}header{background:#fff;border-bottom:1px solid #dce4eb;padding:14px 18px;text-align:center}h1{font-size:clamp(17px,3vw,24px);margin:0 0 4px}header p{font-size:13px;color:#64748b;margin:0}.toolbar{position:sticky;top:0;z-index:2;background:#fff;box-shadow:0 2px 9px #2637471a;display:flex;justify-content:center;align-items:center;gap:12px;padding:12px;flex-wrap:wrap}button{border:0;border-radius:9px;background:#216a91;color:#fff;padding:11px 18px;font-size:15px;cursor:pointer}button:disabled{opacity:.35;cursor:not-allowed}#counter{font-size:15px;min-width:90px;text-align:center}main{padding:18px 12px 38px;display:flex;justify-content:center}img{display:block;width:min(100%,780px);height:auto;box-shadow:0 6px 28px #24394c30;background:#fff}footer{text-align:center;color:#64748b;font-size:12px;padding:0 12px 22px}</style></head><body><header><h1>腦中風病人血壓調控之組合式照護</h1><p>A-P-P-L-E Bundle 電子書</p></header><nav class="toolbar"><button id="prev" onclick="move(-1)">上一頁</button><span id="counter" aria-live="polite">1 / 22</span><button id="next" onclick="move(1)">下一頁</button></nav><main><img id="page" src="1.jpg" alt="電子書第1頁"></main><footer>可使用上一頁、下一頁按鈕或鍵盤左右方向鍵閱讀</footer><script>let current=1;const total=22;function show(n){current=Math.max(1,Math.min(total,n));document.getElementById('page').src=current+'.jpg';document.getElementById('page').alt='電子書第'+current+'頁';document.getElementById('counter').textContent=current+' / '+total;document.getElementById('prev').disabled=current===1;document.getElementById('next').disabled=current===total;window.scrollTo({top:0,behavior:'instant'})}function move(d){show(current+d)}document.addEventListener('keydown',e=>{if(e.key==='ArrowLeft')move(-1);if(e.key==='ArrowRight')move(1)});show(1)</script></body></html>
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>A-P-P-L-E Bundle 電子書</title>
+<style>
+body{margin:0;background:#eef3f7;font-family:Arial,"Microsoft JhengHei",sans-serif;text-align:center;color:#203449}
+header{background:white;padding:16px}
+h1{font-size:clamp(20px,4vw,30px);margin:5px}
+nav{background:white;padding:15px;position:sticky;top:0}
+button{background:#216a91;color:white;border:0;border-radius:8px;padding:12px 20px;font-size:16px;margin:5px}
+button:disabled{opacity:.4}
+img{display:block;max-width:95%;width:850px;height:auto;margin:20px auto;box-shadow:0 3px 15px #aaa}
+</style>
+</head>
+<body>
+<header><h1>腦中風病人血壓調控之組合式照護</h1><p>A-P-P-L-E Bundle 電子書</p></header>
+<nav><button onclick="change(-1)">上一頁</button><span id="num">1 / 22</span><button onclick="change(1)">下一頁</button></nav>
+<img id="book" src="1.jpg" alt="電子書">
+<script>
+let page=1;
+function change(n){page=Math.max(1,Math.min(22,page+n));document.getElementById("book").src=page+".jpg";document.getElementById("num").textContent=page+" / 22";}
+</script>
+</body>
+</html>
